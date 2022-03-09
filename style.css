@@ -1,3 +1,5 @@
-.p_class {
+.h1_class {
   color: steelblue;
+  position: absolute;
+  font-size: 2rem;
 }

@@ -55,7 +55,6 @@
           $data = json_decode( file_get_contents($api_url), true);
 
           $gerecht = $data[0]['name'];
-          $recept = $data[0][''];
           $ingredient = $data[0]['ingredients'];
           $portie = $data[0]['portions'];
             echo '<h1 class="centered">Gerecht: '. $gerecht .'</h1>

@@ -11,36 +11,37 @@
     <title>Gerechten app</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="main.php">HOME</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="opgeslagen.php">OPGESLAGEN</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="help.php">HELP</a>
-            <li class="nav-item">
-              <a class="nav-link" href="login.php">LOGIN</a>
-            <li class="nav-item">
-              <a class="nav-link" href="registreren.php">REGISTREREN</a>
-            </li>
-          </ul>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">  
+    <a class="navbar-brand" href="main.php"><div class="image"><img src="images/deventer.jpg"  class="img-fluid"></div></a>
+        <div class="container-fluid">
+          <a class="navbar-brand" href="main.php">HOME</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="opgeslagen.php">OPGESLAGEN</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="help.php">HELP</a>
+              <li class="nav-item">
+                <a class="nav-link" href="login.php">LOGIN</a>
+              <li class="nav-item">
+                <a class="nav-link" href="registreren.php">REGISTREREN</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
+      </nav>
     
     <form action="action_page.php" style="border:1px solid #ccc">
         <div class="container">
-          <h1>Sign Up</h1>
-          <p>Please fill in this form to create an account.</p>
+          <h1>Registreren</h1>
+          <p>Vul het formulier hieronder in om uw eigen account te maken.</p>
           <hr>
       
-          <label for="email"><b>Email</b></label>
+          <label for="email"><b>Voornaam</b></label>
           <input type="text" placeholder="Voornaam" name="email" required>
 
           <label for="uname"><b>Tussenvoegsel</b></label>
@@ -69,6 +70,18 @@
       </form>
     <div class="container pt-5">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <?php
+      $recipes[] = ['recipe_id' => $row['Recept_ID'],
+      'name' => $row['Omschrijving'],
+      'ingredients' => $row['Ingredienten'],
+      'portions' => $row['Personen'],
+        'cooking_time' => $row['Beredingstijd'],
+      'restaurant_id' => $row['RESTAURANT_Restaurant_ID']
+     ];
 
+     echo json_encode( $recipes );
+
+
+    ?>
   </body>
 </html>

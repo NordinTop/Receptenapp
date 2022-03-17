@@ -84,3 +84,8 @@ span.psw {
   margin-right: 3vw;
   margin-top: 3vw;
 }
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}

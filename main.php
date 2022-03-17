@@ -13,6 +13,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="main.php"><div class="image"><img src="images/deventer.jpg"  class="img-fluid"></div></a>
       <div class="container-fluid">
         <a class="navbar-brand" href="main.php">HOME</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

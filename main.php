@@ -51,24 +51,31 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     
     <?php
-          $api_url = 'https://aventus-173566.aventusfactory.nl/Recepten/connect.php';
+          //$api_url = 'https://aventus-173566.aventusfactory.nl/Recepten/connect.php';
+          $api_url = 'https://aventus-173155.aventusfactory.nl/select_random_recipe.php';
           $data = json_decode( file_get_contents($api_url), true);
 
           $gerecht = $data[0]['name'];
-          $recept = $data[0][''];
+          $recept = $data[0]['description'];
           $ingredient = $data[0]['ingredients'];
           $portie = $data[0]['portions'];
             echo '<h1 class="centered">Gerecht: '. $gerecht .'</h1>
             <div class="row">
               <div class="col-3">
-                <img src="images/steak.jpg" class="img-fluid">
+                <img src="images/burger.jpg" class="img-fluid">
               </div>
               <div class="col-9">
                 <p class="fw-bold">Ingrediënten: ' . $ingredient . '</p>
               </div>
+              <div class="col-9">
+              <p class="fw-bold">Porties: ' . $portie . '</p>
+              </div>
+              <div class="col-9">
+              <p class="fw-bold">Recept: ' . $recept . '</p>
+              </div>
 
             </div>
-        </div>';
+      </div>';
       ?>
       <div class="buttonrefresh"><button type="button" onClick="window.location.reload()" class="btn btn-danger"><i class="fa-solid fa-arrow-rotate-right"></i> Nieuw recept</button></div>
   </body>

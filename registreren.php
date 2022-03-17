@@ -26,6 +26,8 @@
               <a class="nav-link" href="help.php">HELP</a>
             <li class="nav-item">
               <a class="nav-link" href="login.php">LOGIN</a>
+            <li class="nav-item">
+              <a class="nav-link" href="registreren.php">REGISTREREN</a>
             </li>
           </ul>
         </div>
@@ -39,7 +41,13 @@
           <hr>
       
           <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
+          <input type="text" placeholder="Voornaam" name="email" required>
+
+          <label for="uname"><b>Tussenvoegsel</b></label>
+          <input type="text" placeholder="Tussenvoegsel" name="uname">
+
+          <label for="uname"><b>Achternaam</b></label>
+          <input type="text" placeholder="Achternaam" name="uname" required>
       
           <label for="psw"><b>Password</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>

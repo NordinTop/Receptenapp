@@ -27,6 +27,8 @@
               <a class="nav-link" href="help.php">HELP</a>
             <li class="nav-item">
               <a class="nav-link" href="login.php">LOGIN</a>
+            <li class="nav-item">
+              <a class="nav-link" href="registreren.php">REGISTREREN</a>
             </li>
           </ul>
         </div>

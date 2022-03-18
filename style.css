@@ -25,6 +25,8 @@ button {
   margin: 8px 0;
   border: none;
   cursor: pointer;
+  margin-left: 2rem;
+  padding-left: 2rem;
 }
 
 /* Add a hover effect for buttons */
@@ -37,6 +39,8 @@ button:hover {
   width: auto;
   padding: 10px 18px;
   background-color: #f44336;
+  margin-left: 2rem;
+  padding-left: 2rem;
 }
 
 /* Center the avatar image inside this container */

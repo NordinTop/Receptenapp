@@ -50,10 +50,10 @@
           <label for="uname"><b>Achternaam</b></label>
           <input type="text" placeholder="Achternaam" name="uname" required>
       
-          <label for="psw"><b>Password</b></label>
+          <label for="psw"><b>Wachtwoord</b></label>
           <input type="password" placeholder="Enter Password" name="psw" required>
       
-          <label for="psw-repeat"><b>Repeat Password</b></label>
+          <label for="psw-repeat"><b>Herhaal wachtwoord</b></label>
           <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
       
           <label>

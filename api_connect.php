@@ -1,5 +1,5 @@
 <?php
-   
+   // print de array
   function preprint_r( $arr ) {
     echo '<pre>'; 
     print_r( $arr );
@@ -36,11 +36,11 @@ if ($conn->connect_error) {
    die("Connection failed: " . $conn->connect_error);
 } else 
     
-    
+// 2 querries om een random restaurant te kiezen en daarna met het restaurant id een random recept    
 $stmt = $pdo->query ("SELECT * FROM RECEPT WHERE `RESTAURANT_Restaurant_ID` LIKE 1 ORDER BY RAND() LIMIT 1");
 $stmt2 = $pdo->query ("SELECT * FROM RESTAURANT ORDER BY RAND() LIMIT 1;");
 
-      
+// array maken met een loop om de info in een array te zetten      
 $restaurants = [];
 while( $row = $stmt2->fetch() ) {
     $restaurants[] = ['id' => $row['Restaurant_ID'],
@@ -49,9 +49,9 @@ while( $row = $stmt2->fetch() ) {
 }
     
 $stmt = $pdo->query ("SELECT * FROM RECEPT WHERE `RESTAURANT_Restaurant_ID` LIKE {$restaurants[0]['id']} ORDER BY RAND() LIMIT 1");
-
+// lege array maken om te vullen met info
 $recipes = [];
-
+// door de array loopen om te vullen met info
 while( $row = $stmt->fetch() ) {
     $recipes[] = ['recipe_id' => $row['Recept_ID'],
                       'name' => $row['Omschrijving'],
@@ -63,9 +63,9 @@ while( $row = $stmt->fetch() ) {
                      ];
 }
 
-
+	// om de json te laten zien voor testen 
       header( 'Content-type: application/json');
-
+	// encoden naar json en vervolgens te laten zien met een echo
       echo json_encode( $recipes );
 	  // echo json_encode( $restaurants );
 ?>
